@@ -13,4 +13,4 @@
 
 入口维护与核验见 [接入记录](../../../docs/governance/repository-ai-entrypoints.md)。只执行当前改动所需的仓库检查；发布另按既有授权流程。
 
-本仓为固定版本 ANTLR 上游源码；[ANTLR C++ 开发规范](../../../docs/engineering/antlr-cpp-dsl-development.md) 说明安装与业务边界。修改生成器或 runtime 需单独任务；安装探针不是交易 DSL。
+本仓为固定版本 ANTLR 上游源码；[ANTLR C++ 开发规范](../../../docs/engineering/tools/antlr-cpp-dsl-development.md) 说明安装与业务边界。修改生成器或 runtime 需单独任务；安装探针不是交易 DSL。
