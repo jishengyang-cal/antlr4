@@ -1,4 +1,4 @@
-# Generated from $HOME/Dropbox/code/python/antlr4-learn/test_grammar/T.g4 by ANTLR 4.5.3
+# Generated from T.g4 by ANTLR 4.5.3
 # encoding: utf-8
 from __future__ import print_function
 from antlr4 import *

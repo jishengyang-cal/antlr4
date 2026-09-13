@@ -320,9 +320,12 @@ The Python target gets deployed with `twine` for Python 3.
 
 First, set up `~/.pypirc` with tight privileges:
 
+The final path in the listing is the expanded path under the current user's
+home directory; this example uses `/home/alice`.
+
 ```bash
 beast:~ $ ls -l ~/.pypirc
--rw-------  1 parrt  staff  267 Jul 15 17:02 $HOME/.pypirc
+-rw-------  1 alice  alice  267 Jul 15 17:02 /home/alice/.pypirc
 ```
 
 ```
@@ -429,6 +432,10 @@ Jars are in:
 
 Copy javadoc and java jars to website using this script:
 
+The script reads the jars from the current user's Maven repository and defaults
+the website root to `~/antlr/sites/website-antlr4`. The prompt displays that
+path after expanding `~` to the current user's home directory.
+
 ```bash
 cd ~/antlr/code/antlr4
 python scripts/deploy_to_website.py 4.13.1 4.13.2
@@ -438,7 +445,7 @@ Output:
 
 ```bash
 Updating ANTLR version from 4.13.1 to 4.13.2
-Set ANTLR website root (default $HOME/antlr/sites/website-antlr4):
+Set ANTLR website root (default /home/alice/antlr/sites/website-antlr4):
 Version string updated. Please commit/push:
 Javadoc copied:
 	api/Java updated from antlr4-runtime-4.13.2-javadoc.jar

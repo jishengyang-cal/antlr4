@@ -77,7 +77,8 @@ $ mvn install -DskipTests   # make sure all artifacts are visible on this machin
 You should see these jars (when building 4.6-SNAPSHOT):
 
 ```bash
-$HOME/.m2/repository/org/antlr $ find antlr4* -name '*.jar'
+$ cd "$HOME/.m2/repository/org/antlr"
+$ find antlr4* -name '*.jar'
 antlr4-maven-plugin/4.6-SNAPSHOT/antlr4-maven-plugin-4.6-SNAPSHOT.jar
 antlr4-runtime-testsuite/4.6-SNAPSHOT/antlr4-runtime-testsuite-4.6-SNAPSHOT-tests.jar
 antlr4-runtime-testsuite/4.6-SNAPSHOT/antlr4-runtime-testsuite-4.6-SNAPSHOT.jar

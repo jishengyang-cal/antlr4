@@ -14,7 +14,8 @@ import java.util.Map;
 import static org.antlr.v4.test.runtime.RuntimeTestUtils.joinLines;
 
 public class Processor {
-	/** Turn this on to see output like:
+	/** Turn this on to see output like the following, with the home directory
+	 *  abbreviated as {@code $HOME}:
 	 *  RUNNING cmake . -DCMAKE_BUILD_TYPE=Release in $HOME/antlr/code/antlr4/runtime/Cpp
 	 *  RUNNING make -j 20 in $HOME/antlr/code/antlr4/runtime/Cpp
 	 *  RUNNING ln -s $HOME/antlr/code/antlr4/runtime/Cpp/dist/libantlr4-runtime.dylib in /var/folders/w1/_nr4stn13lq0rvjdkwh7q8cc0000gn/T/CppRunner-ForkJoinPool-1-worker-23-1668284191961

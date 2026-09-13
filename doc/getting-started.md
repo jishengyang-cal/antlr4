@@ -12,11 +12,14 @@ $ pip install antlr4-tools
 
 That command creates `antlr4` and `antlr4-parse` executables that, if necessary, will download and install Java 11 plus the latest ANTLR jar:
 
+The installer reports the expanded path under the current user's home
+directory; this example uses `/home/alice`.
+
 ```bash
 $ antlr4 
 Downloading antlr4-4.13.2-complete.jar
 ANTLR tool needs Java to run; install Java JRE 11 yes/no (default yes)? y
-Installed Java in $HOME/.jre/jdk-11.0.15+10-jre; remove that dir to uninstall
+Installed Java in /home/alice/.jre/jdk-11.0.15+10-jre; remove that dir to uninstall
 ANTLR Parser Generator  Version 4.13.2
  -o ___              specify output directory where all output is generated
  -lib ___            specify location of grammars, tokens files
