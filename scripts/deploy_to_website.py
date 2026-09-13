@@ -14,8 +14,8 @@ website_files_to_update = ['download.html',
                            'scripts/topnav.js']
 
 
-def runme(cmd):
-    return subprocess.check_output(cmd.split(' '))
+def runme(args):
+    return subprocess.check_output(args)
 
 
 def update_file(qfname, multi, before, after):
@@ -42,24 +42,24 @@ def copy_javadoc(release_version):
     # release_version = release_version+"-SNAPSHOT" # testing
     os.chdir(WEBSITE_ROOT+"/api/Java")
     print("Javadoc copied:")
-    runme(f"jar xf {ANTLR_M2_ROOT}/antlr4-runtime/{release_version}/antlr4-runtime-{release_version}-javadoc.jar")
+    runme(["jar", "xf", f"{ANTLR_M2_ROOT}/antlr4-runtime/{release_version}/antlr4-runtime-{release_version}-javadoc.jar"])
     print(f"\tapi/Java updated from antlr4-runtime-{release_version}-javadoc.jar")
     os.chdir(WEBSITE_ROOT+"/api/JavaTool")
-    runme(f"jar xf {ANTLR_M2_ROOT}/antlr4/{release_version}/antlr4-{release_version}-javadoc.jar")
+    runme(["jar", "xf", f"{ANTLR_M2_ROOT}/antlr4/{release_version}/antlr4-{release_version}-javadoc.jar"])
     print(f"\tapi/JavaTool updated from antlr4-{release_version}-javadoc.jar")
     os.chdir(WEBSITE_ROOT+"/api/maven-plugin/latest")
-    runme(f"jar xf {ANTLR_M2_ROOT}/antlr4-maven-plugin/{release_version}/antlr4-maven-plugin-{release_version}-javadoc.jar")
+    runme(["jar", "xf", f"{ANTLR_M2_ROOT}/antlr4-maven-plugin/{release_version}/antlr4-maven-plugin-{release_version}-javadoc.jar"])
     print(f"\tapi/JavaTool updated from antlr4-maven-plugin-{release_version}-javadoc.jar")
 
 
 def copy_jars(release_version):
     # release_version = release_version+"-SNAPSHOT" # testing
     print("Jars copied:")
-    runme(f"cp {ANTLR_M2_ROOT}/antlr4-runtime/{release_version}/antlr4-runtime-{release_version}.jar {WEBSITE_ROOT}/download/antlr-runtime-{release_version}.jar")
-    runme(f"cp {ANTLR_M2_ROOT}/antlr4/{release_version}/antlr4-{release_version}-complete.jar {WEBSITE_ROOT}/download/antlr-{release_version}-complete.jar")
+    runme(["cp", f"{ANTLR_M2_ROOT}/antlr4-runtime/{release_version}/antlr4-runtime-{release_version}.jar", f"{WEBSITE_ROOT}/download/antlr-runtime-{release_version}.jar"])
+    runme(["cp", f"{ANTLR_M2_ROOT}/antlr4/{release_version}/antlr4-{release_version}-complete.jar", f"{WEBSITE_ROOT}/download/antlr-{release_version}-complete.jar"])
     os.chdir(WEBSITE_ROOT+"/download")
-    runme(f"git add antlr-{release_version}-complete.jar")
-    runme(f"git add antlr-runtime-{release_version}.jar")
+    runme(["git", "add", f"antlr-{release_version}-complete.jar"])
+    runme(["git", "add", f"antlr-runtime-{release_version}.jar"])
     print(f"\tantlr-{release_version}-complete.jar")
     print(f"\tantlr-runtime-{release_version}.jar")
 
