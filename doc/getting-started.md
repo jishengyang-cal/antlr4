@@ -16,7 +16,7 @@ That command creates `antlr4` and `antlr4-parse` executables that, if necessary,
 $ antlr4 
 Downloading antlr4-4.13.2-complete.jar
 ANTLR tool needs Java to run; install Java JRE 11 yes/no (default yes)? y
-Installed Java in /Users/parrt/.jre/jdk-11.0.15+10-jre; remove that dir to uninstall
+Installed Java in $HOME/.jre/jdk-11.0.15+10-jre; remove that dir to uninstall
 ANTLR Parser Generator  Version 4.13.2
  -o ___              specify output directory where all output is generated
  -lib ___            specify location of grammars, tokens files

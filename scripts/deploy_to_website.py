@@ -5,8 +5,8 @@ import os
 import subprocess
 
 
-WEBSITE_ROOT  = '/Users/parrt/antlr/sites/website-antlr4'
-ANTLR_M2_ROOT = '/Users/parrt/.m2/repository/org/antlr'
+WEBSITE_ROOT  = os.path.expanduser('~/antlr/sites/website-antlr4')
+ANTLR_M2_ROOT = os.path.expanduser('~/.m2/repository/org/antlr')
 
 website_files_to_update = ['download.html',
                            'index.html',

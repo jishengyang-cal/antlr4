@@ -98,15 +98,15 @@ This section addresses a [circular dependency regarding XPath](https://github.co
 
 ```bash
 cd ~/antlr/code/antlr4/runtime/Cpp/runtime/src/tree/xpath
-java -cp ":/Users/parrt/.m2/repository/org/antlr/antlr4/4.13.2-SNAPSHOT/antlr4-4.13.2-SNAPSHOT-complete.jar:$CLASSPATH" org.antlr.v4.Tool -Dlanguage=Cpp XPathLexer.g4
+java -cp ":$HOME/.m2/repository/org/antlr/antlr4/4.13.2-SNAPSHOT/antlr4-4.13.2-SNAPSHOT-complete.jar:$CLASSPATH" org.antlr.v4.Tool -Dlanguage=Cpp XPathLexer.g4
 
 cd ~/antlr/code/antlr4/runtime/CSharp/src/Tree/Xpath
-java -cp ":/Users/parrt/.m2/repository/org/antlr/antlr4/4.13.2-SNAPSHOT/antlr4-4.13.2-SNAPSHOT-complete.jar:$CLASSPATH" org.antlr.v4.Tool -Dlanguage=CSharp XPathLexer.g4
+java -cp ":$HOME/.m2/repository/org/antlr/antlr4/4.13.2-SNAPSHOT/antlr4-4.13.2-SNAPSHOT-complete.jar:$CLASSPATH" org.antlr.v4.Tool -Dlanguage=CSharp XPathLexer.g4
 
 cd ~/antlr/code/antlr4/runtime/Python3/tests/expr
-java -cp ":/Users/parrt/.m2/repository/org/antlr/antlr4/4.13.2-SNAPSHOT/antlr4-4.13.2-SNAPSHOT-complete.jar:$CLASSPATH" org.antlr.v4.Tool -Dlanguage=Python3 Expr.g4
+java -cp ":$HOME/.m2/repository/org/antlr/antlr4/4.13.2-SNAPSHOT/antlr4-4.13.2-SNAPSHOT-complete.jar:$CLASSPATH" org.antlr.v4.Tool -Dlanguage=Python3 Expr.g4
 cd ~/antlr/code/antlr4/runtime/Python3/src/antlr4/xpath
-java -cp ":/Users/parrt/.m2/repository/org/antlr/antlr4/4.13.2-SNAPSHOT/antlr4-4.13.2-SNAPSHOT-complete.jar:$CLASSPATH" org.antlr.v4.Tool -Dlanguage=Python3 XPathLexer.g4
+java -cp ":$HOME/.m2/repository/org/antlr/antlr4/4.13.2-SNAPSHOT/antlr4-4.13.2-SNAPSHOT-complete.jar:$CLASSPATH" org.antlr.v4.Tool -Dlanguage=Python3 XPathLexer.g4
 ```
 
 ## Maven Repository Settings
@@ -322,7 +322,7 @@ First, set up `~/.pypirc` with tight privileges:
 
 ```bash
 beast:~ $ ls -l ~/.pypirc
--rw-------  1 parrt  staff  267 Jul 15 17:02 /Users/parrt/.pypirc
+-rw-------  1 parrt  staff  267 Jul 15 17:02 $HOME/.pypirc
 ```
 
 ```
@@ -438,7 +438,7 @@ Output:
 
 ```bash
 Updating ANTLR version from 4.13.1 to 4.13.2
-Set ANTLR website root (default /Users/parrt/antlr/sites/website-antlr4): 
+Set ANTLR website root (default $HOME/antlr/sites/website-antlr4):
 Version string updated. Please commit/push:
 Javadoc copied:
 	api/Java updated from antlr4-runtime-4.13.2-javadoc.jar

@@ -1,0 +1,6 @@
+# Verified false positives: historical Xcode SCM repository IDs and workspace UUID.
+# These four exact commit/path/rule/line fingerprints are metadata, not credentials.
+6d2b5b67905fe9f99bd27ec8bc79e4070178900f:runtime/Swift/Antlr4.xcodeproj/project.xcworkspace/xcshareddata/Antlr4.xcscmblueprint:generic-api-key:2
+6d2b5b67905fe9f99bd27ec8bc79e4070178900f:runtime/Swift/Antlr4.xcodeproj/project.xcworkspace/xcshareddata/Antlr4.xcscmblueprint:generic-api-key:10
+6d2b5b67905fe9f99bd27ec8bc79e4070178900f:runtime/Swift/Antlr4.xcodeproj/project.xcworkspace/xcshareddata/Antlr4.xcscmblueprint:generic-api-key:22
+6d2b5b67905fe9f99bd27ec8bc79e4070178900f:runtime/Swift/Antlr4.xcodeproj/project.xcworkspace/xcshareddata/Antlr4.xcscmblueprint:generic-api-key:27
